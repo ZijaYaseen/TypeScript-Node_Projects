@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 /* Simple CLI calculator:*/
 
 import inquirer from "inquirer";
@@ -23,7 +24,7 @@ if(answer.operator === "Addition"){
     console.log(`Your answer is: `);
     console.log(answer.FirstNumber + answer.SecondNumber);
 } 
- if(answer.operator === "Substraction"){
+else if(answer.operator === "Substraction"){
     console.log(`Your answer is:`);
     console.log(answer.FirstNumber - answer.SecondNumber); 
 }
@@ -44,5 +45,5 @@ else if(answer.operator === "Exponentation"){
     console.log(answer.FirstNumber ** answer.SecondNumber); 
 }
 else {
-    console.log("Please enter valid operator!")
+    console.log("Please enter valid operator!");
 };

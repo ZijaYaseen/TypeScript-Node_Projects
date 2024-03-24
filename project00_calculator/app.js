@@ -1,3 +1,5 @@
+#! /usr/bin/env node
+/* Simple CLI calculator:*/
 import inquirer from "inquirer";
 const answer = await inquirer.prompt([
     { message: "Enter first Number:",
@@ -16,7 +18,7 @@ if (answer.operator === "Addition") {
     console.log(`Your answer is: `);
     console.log(answer.FirstNumber + answer.SecondNumber);
 }
-if (answer.operator === "Substraction") {
+else if (answer.operator === "Substraction") {
     console.log(`Your answer is:`);
     console.log(answer.FirstNumber - answer.SecondNumber);
 }
