@@ -1,5 +1,5 @@
 {
-  "name": "zija-cli-number-guessing-game",
+  "name": "zija-cli-number-guessing",
   "version": "1.0.0",
   "description": "A simple CLI number guessing game with Typescript, Node.js, and Inquirer.",
   "main": "app.js",
