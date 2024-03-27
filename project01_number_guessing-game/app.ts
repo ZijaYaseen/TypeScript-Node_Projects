@@ -2,12 +2,13 @@
 // CLI Number Guessing Game:
 
 import inquirer from "inquirer";
+import chalk from "chalk";
 
-const randomNumber : number = Math.floor(Math.random() * 10 + 1);
+const randomNumber : number = Math.floor(Math.random() * 6 + 1);
 
 const answer = await inquirer.prompt([
     {
-        message : "Please select number between (1-10):",
+        message : "Please select number between (1-7):",
         type : "number",
         name : "userGuessedNumber",
     },
@@ -15,9 +16,10 @@ const answer = await inquirer.prompt([
 
 if(randomNumber === answer.userGuessedNumber){
     console.log(`The correct answer is: ${randomNumber}`);
-    console.log("Congratulations! You guessed correct number");
+    console.log(chalk.bold.cyan("Congratulations! You guessed correct number."));
     
 } else{
     console.log(`The correct answer is: ${randomNumber}`);
-    console.log("Ooops! You guessed wrong number. TRY AGAIN!")
+    console.log(chalk.red("Ooops! You guessed wrong number. TRY AGAIN!"));
+    
 };

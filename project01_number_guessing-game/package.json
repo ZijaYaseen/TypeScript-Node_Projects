@@ -1,16 +1,17 @@
 {
   "name": "zija-cli-number-guessing",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A simple CLI number guessing game with Typescript, Node.js, and Inquirer.",
   "main": "app.js",
   "type": "module",
-  "bin" : "app.js",
+  "bin": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Zija Yaseen",
   "license": "MIT",
   "dependencies": {
+    "chalk": "^5.3.0",
     "inquirer": "^9.2.16"
   },
   "devDependencies": {
