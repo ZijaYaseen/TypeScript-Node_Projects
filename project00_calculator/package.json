@@ -1,17 +1,19 @@
 {
   "name": "zija-calculator",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "A simple CLI calculator with Typescript, Node.js, and Inquirer.",
   "main": "app.js",
   "type": "module",
-  "bin" :"app.js",
+  "bin": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Zija Yaseen",
   "license": "MIT",
   "dependencies": {
-    "inquirer": "^9.2.16"
+    "chalk": "^5.3.0",
+    "inquirer": "^9.2.17",
+    "node-banner": "^1.4.0"
   },
   "devDependencies": {
     "@types/inquirer": "^9.0.7"
