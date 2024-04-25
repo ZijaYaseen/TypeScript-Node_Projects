@@ -1,3 +1,5 @@
+#! /usr/bin/env node
+
 import inquirer from "inquirer";
 import chalk from "chalk";
 
@@ -25,7 +27,7 @@ class Student{
     }
 
     showStatus(){
-        return chalk.yellowBright(`Name: ${chalk.greenBright(this.name)}\n ID: ${chalk.greenBright(this.studentID)}\n Courses Enrolled: ${chalk.greenBright(this.courses)}\n Balance: ${chalk.greenBright(this.viewBalance())}`)
+        return chalk.yellowBright(`Name: ${chalk.greenBright(this.name)}\nID: ${chalk.greenBright(this.studentID)}\nCourses Enrolled: ${chalk.greenBright(this.courses)}\nBalance: ${chalk.greenBright(this.viewBalance())}`)
     };
 };
 
@@ -72,7 +74,7 @@ while(condiition){
 
         let student = new Student(name,courses.split(", ").map((course:string) => course.trim()));
         id[student.studentID] = student;
-        console.log(chalk.yellowBright(`Student added with ID: ${chalk.greenBright(student.studentID)}`));
+        console.log(chalk.magentaBright(`Student added with ID: ${chalk.greenBright(student.studentID)}`));
     }
     else{
         let {stdID} = await inquirer.prompt([
@@ -98,12 +100,12 @@ while(condiition){
                 }
             ])
             student.enrollCourses(course);
-            console.log(`Enrolled in ${course}`);
+            console.log(chalk.magentaBright(`Enrolled in Course: ${chalk.yellowBright(course)}`));
             
            }
 
         else if(operators.operator === "View Balance"){
-            console.log(chalk.yellowBright(`Balance: ${chalk.greenBright(student.viewBalance())}`));
+            console.log(chalk.magentaBright(`Balance: ${chalk.greenBright(student.viewBalance())}`));
            }
 
            else if(operators.operator === "Pay Tution Fees"){
@@ -115,7 +117,7 @@ while(condiition){
                 }
             )
             student.payTuTionFees(tutionFees);
-            console.log(chalk.greenBright(`Paid ${tutionFees} in tuition.`));
+            console.log(chalk.magentaBright(`Paid $${tutionFees} in tuition.`));
            }
            else if(operators.operator === "Show Status"){
             console.log(student.showStatus());
