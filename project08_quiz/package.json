@@ -1,6 +1,6 @@
 {
   "name": "z15-quiz-app",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A CLI based Quiz App using Typescript, Node.js and Inquirer.",
   "main": "app.js",
   "type": "module",

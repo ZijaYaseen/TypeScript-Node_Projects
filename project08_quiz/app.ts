@@ -46,6 +46,7 @@ async function startQuiz () {
             console.log(chalk.greenBright("Correct Answer!\n"));
         }
         else{
+            console.log(chalk.red("Wrong!!"));
             console.log(chalk.yellow(`The Correct Answer is: ${chalk.red(data[i].correct_answer)}\n`)); 
             }
         }
