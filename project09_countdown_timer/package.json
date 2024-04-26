@@ -1,0 +1,21 @@
+{
+  "name": "z15-countdown-timer",
+  "version": "1.0.0",
+  "description": "A CLI based countdown timer.",
+  "main": "app.js",
+  "type": "module",
+  "bin":"app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Zija Yaseen",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "date-fns": "^3.6.0",
+    "inquirer": "^9.2.20"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^9.0.7"
+  }
+}
