@@ -105,7 +105,7 @@ else if (userAns === "Hours") {
     console.log(chalk.greenBright.bold.italic("The Countdown Timer Has Started!!"));
     console.log(chalk.cyanBright.italic("     Press Ctrl+C to Exit."));
     function startTimer(seconds) {
-        const startTime = new Date().setSeconds(new Date().getSeconds() + seconds);
+        const startTime = new Date().setSeconds(new Date().getSeconds() + seconds + 2);
         let exactStartTime = new Date(startTime);
         setInterval(() => {
             const currentTime = new Date();
