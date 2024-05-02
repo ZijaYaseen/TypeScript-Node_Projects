@@ -1,0 +1,1 @@
+A CLI based oop myBank Project using Typescript, Node.js & Inquirer.
