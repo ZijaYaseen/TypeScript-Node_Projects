@@ -65,6 +65,10 @@ async function oop (){
     )
     ans = userAns;
     let myPerson = new Person();
+    // let p1 = new Student();
+    // p1.askQuestion
+    // let s1 = new Person()
+    
     myPerson.askQuestion(ans);
     console.log(chalk.yellow(`You are ${myPerson.getPersonality()}`));
     

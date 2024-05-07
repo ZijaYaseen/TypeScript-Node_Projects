@@ -21,6 +21,9 @@ class Game{
 }
 
 let running :boolean = true;
+// let g1 = new Game();
+// g1.enimies["abcgs"]
+// Game.
 
 async function game() {
 

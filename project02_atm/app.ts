@@ -34,7 +34,7 @@ if(pinAns.pinCode === myPin){
                 {
                     name : "amount",
                     type: "number",
-                    message : "How much would you like to withdraw?",
+                    message : "How much amount would you like to withdraw?",
                 }
         )
 
