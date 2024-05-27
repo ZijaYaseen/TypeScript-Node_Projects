@@ -1,0 +1,19 @@
+{
+  "name": "project12-online-ticketing-system-flow",
+  "version": "1.0.0",
+  "description": "A CLI based Online Ticketing System Flow using Typescript, Node.js & Inquirer.",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Zija Yaseen",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "inquirer": "^9.2.22"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^9.0.7"
+  }
+}
