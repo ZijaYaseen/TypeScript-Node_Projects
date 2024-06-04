@@ -1,9 +1,10 @@
 {
-  "name": "project12-online-ticketing-system-flow",
+  "name": "z15-online-ticketing-system-flow",
   "version": "1.0.0",
   "description": "A CLI based Online Ticketing System Flow using Typescript, Node.js & Inquirer.",
   "main": "app.js",
   "type": "module",
+  "bin":"app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

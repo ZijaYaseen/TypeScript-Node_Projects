@@ -1,3 +1,4 @@
+#!usr/bin/env node
 import chalk from "chalk";
 import inquirer from "inquirer";
 class UserId {
@@ -147,7 +148,8 @@ async function eventsFlow() {
                 },
                 {
                     name: "password",
-                    type: "input",
+                    type: "password",
+                    mask: '*',
                     message: "Enter 6-8 digits Password: ",
                     validate: (input) => {
                         if (input.length < 6 || input.length > 8) {
@@ -197,6 +199,7 @@ async function eventsFlow() {
                     {
                         name: "adminPassword",
                         type: "password",
+                        mask: "*",
                         message: "Enter Your Password: ",
                         validate: (input) => {
                             if (input.length == 0 || input.length < 6) {
@@ -476,7 +479,8 @@ async function eventsFlow() {
                     },
                     {
                         name: "userPassword",
-                        type: "input",
+                        type: "password",
+                        mask: "*",
                         message: "Enter Your Password: ",
                         validate: (input) => {
                             if (input.length == 0 || input.length < 6) {
@@ -543,7 +547,7 @@ async function eventsFlow() {
                                     {
                                         name: "bookTicket",
                                         type: "list",
-                                        message: "Book Your Ticket Now: \n",
+                                        message: "Select An Event For Booking: \n",
                                         default: true,
                                         choices: filteredEvents.map(event => ({
                                             name: event.selectTicketsHistory(),
@@ -603,7 +607,7 @@ async function eventsFlow() {
                             let { userSelectedViewAllEvents } = await inquirer.prompt({
                                 name: "userSelectedViewAllEvents",
                                 type: "list",
-                                message: "Book Your Ticket Now: ",
+                                message: "Select An Event For Booking: \n",
                                 choices: eventChoices
                             });
                             const userSelectViewAllEvents = userSelectedViewAllEvents;
@@ -659,6 +663,9 @@ async function eventsFlow() {
                                 userViewBookedEvents.forEach(event => {
                                     console.log(event.userViewAllBookedEvents());
                                 });
+                                // userViewBookedEvents.forEach(event => {
+                                //     console.log(event.category,event.title,event.date,event.time,event.city,event.price,event.ticketsBooked)
+                                // })
                             }
                         }
                     }
