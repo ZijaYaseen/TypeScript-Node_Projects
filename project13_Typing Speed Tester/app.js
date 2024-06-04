@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 import chalk from "chalk";
 import inquirer from "inquirer";
 import showBanner from "node-banner";
@@ -36,7 +37,7 @@ async function typingSpeed() {
             choices: ["Sign Up Account", "Login Account", "Quit App"]
         });
         if (entry === "Quit App") {
-            loopMain = false;
+            process.exit(); // Use process.exit(0) to immediately exit the application
         }
         else if (entry === "Sign Up Account") {
             let signUpAcc = await inquirer.prompt([
@@ -195,7 +196,15 @@ async function typingSpeed() {
                                 let response = await inquirer.prompt({
                                     name: "userInput",
                                     type: "input",
-                                    message: "Start Typing..."
+                                    message: "Start Typing...",
+                                    validate: (input) => {
+                                        if (!isNaN(input)) {
+                                            return `Please Enter Text!!`;
+                                        }
+                                        else {
+                                            return true;
+                                        }
+                                    }
                                 });
                                 userInput = response.userInput;
                             }
@@ -220,11 +229,11 @@ async function typingSpeed() {
                             name: "confirm",
                             type: "confirm",
                             message: "Do You Want To Continue?",
-                            default: false
+                            default: true
                         });
                         if (!confirm) {
                             testLoop = false; // Set testLoop to false to exit the inner loop
-                            loopMain = false; // Set loopMain to false to exit the main loop
+                            // loopMain = false; // Set loopMain to false to exit the main loop
                         }
                     }
                 }

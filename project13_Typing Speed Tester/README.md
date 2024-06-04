@@ -1,0 +1,1 @@
+npx Command : npx z15-typing-speed-tester
